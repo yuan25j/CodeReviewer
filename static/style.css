@@ -1,0 +1,153 @@
+/* Global styles */
+body {
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    color: #212529;
+    line-height: 1.6;
+  }
+  
+  /* Container adjustment */
+  .container {
+    max-width: 720px;
+  }
+  
+  /* Card styling */
+  .card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  /* Card header */
+  .card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #343a40;
+  }
+  
+  .card-header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  
+  /* Card body */
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* NEW: Input Option Group Styling */
+  .input-option-group {
+    border: 1px solid #ced4da;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    background-color: #ffffff; /* White background for contrast */
+    transition: opacity 0.3s ease; /* Smooth transition for disabling */
+  }
+  
+  .input-option-group.disabled {
+    opacity: 0.5; /* Make it look faded */
+    pointer-events: none; /* Prevent interaction */
+    background-color: #e9ecef; /* Slightly gray background when disabled */
+  }
+  
+  .input-option-group.disabled label {
+     color: #6c757d; /* Gray out label */
+  }
+  
+  /* Form group spacing */
+  .form-group { /* Keep if needed elsewhere, but using custom group now */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Label styling */
+  label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #495057;
+  }
+  
+  /* Text Input specific */
+  textarea#text-input {
+    font-family: inherit; /* Use body font for regular text */
+    font-size: 1rem;
+    min-height: 80px; /* Adjust height as needed */
+  }
+  
+  /* File Input */
+  .form-control-file {
+    border: 1px solid #ced4da;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    width: 100%; /* Make it take full width within its box */
+  }
+  
+  /* Button styling */
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.3rem;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+  }
+  
+  /* Primary button */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+  }
+  .btn-primary:hover:not(:disabled) { /* Only hover when not disabled */
+    background-color: #0056b3;
+    border-color: #004 MDB;
+  }
+  
+  /* Success button */
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+  }
+  .btn-success:hover:not(:disabled) {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  /* Disabled state for buttons */
+  .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+  
+  
+  /* Textarea styling - Result Box */
+  textarea#result-box {
+    resize: vertical;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.9rem;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    min-height: 150px; /* Increased height */
+    color: #495057;
+  }
+  
+  textarea#result-box::placeholder {
+    color: #6c757d;
+  }
+  
+  /* Spacing utilities */
+  .mt-4 { margin-top: 2rem !important; }
+  .mt-3 { margin-top: 1.5rem !important; }
+  .mb-4 { margin-bottom: 2rem !important; }
+  .my-3 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+  .my-4 { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+  .text-right { text-align: right !important; }
+  .text-center { text-align: center !important; }
+  .text-muted { color: #6c757d !important; }

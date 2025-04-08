@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColVibe</title> <!-- Updated Title -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container mt-5 mb-5">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">ColVibe: Collaborative Vibe Coding</h1> <!-- Updated Header -->
+      </div>
+      <div class="card-body">
+        <form id="upload-form" enctype="multipart/form-data">
+
+          <!-- Input Method 1: Text Input -->
+          <div class="input-option-group mb-4">
+             <label for="text-input">Start a new project using prompt</label>
+             <textarea name="text_input" id="text-input" class="form-control" rows="4" placeholder="Type or paste your text here..."></textarea>
+          </div>
+
+          <!-- Separator -->
+          <p class="text-center text-muted my-3">-- OR --</p>
+
+          <!-- Input Method 2: File Upload -->
+          <div class="input-option-group">
+            <label for="files">Upload existing python files</label>
+            <input type="file" name="files" id="files" class="form-control-file" multiple accept=".py">
+          </div>
+
+          <hr class="my-4"> <!-- Add a horizontal rule before the button -->
+
+          <button type="submit" id="submit-btn" class="btn btn-primary">Process Input</button> <!-- Updated button text -->
+        </form>
+
+        <!-- Results Section -->
+        <div class="mt-4">
+          <label for="result-box">Server Response</label> <!-- Changed label text -->
+          <textarea id="result-box" class="form-control" rows="8" placeholder="Response from server will appear here..." readonly></textarea> <!-- Increased rows, better placeholder -->
+        </div>
+
+        <!-- Download Button -->
+        <div class="mt-3 text-right">
+          <button id="download-btn" class="btn btn-success" disabled>Download as .py</button> <!-- Start disabled -->
+        </div>
+
+      </div> <!-- End card-body -->
+    </div> <!-- End card -->
+  </div> <!-- End container -->
+
+  <!-- Custom Script -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
